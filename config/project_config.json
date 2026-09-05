@@ -1,0 +1,70 @@
+{
+  "project_name": "Primary Science Diagnostic System",
+  "version": "2.5.2",
+  "default_level": "P3",
+  "primary_platform": "hosted Streamlit + macOS development",
+  "development_environment": "VS Code + project .venv",
+  "primary_interface": "streamlit",
+  "deployment_stage": "private_online_pilot",
+  "pupil_identity_input": "class_index_number",
+  "pupil_roster_required": false,
+  "class_form_policy": "one_class_one_google_form_one_qr",
+  "internal_submission_key": "google_forms_response_id",
+  "local_pupil_key": "class_code_plus_index_number",
+  "google_form_creation": "direct_google_forms_api",
+  "google_form_responder_access": "anyone_with_link",
+  "google_form_collect_email": false,
+  "google_form_grading": "local_python",
+  "response_retrieval": "direct_google_forms_api",
+  "analysis_engine": "local_python",
+  "question_generation": "Gemini Notebook template pack + teacher review",
+  "gemini_sends_class": false,
+  "gemini_sends_index_number": false,
+  "gemini_sends_response_id": false,
+  "gemini_default_model": "gemini-3.5-flash-lite",
+  "gemini_thinking_level": "low",
+  "ui_style": "apple_inspired_high_contrast_dark_teacher_ui_tablet_responsive",
+  "reports": "local_pdf_generation_max_2_pages",
+  "gemini_report_analysis": true,
+  "gemini_api_key_storage": "session_only_never_saved",
+  "report_topic_visual": "compact_performance_matrix_dot_track",
+  "report_font": "Arial_10pt_body",
+  "diagnostic_creation": "auto_build_or_manual_with_cumulative_lower_level_topics",
+  "comprehensive_testing": "auto_build_no_fixed_cap_with_lo_and_existing_tlg_tag_coverage",
+  "app_authentication": "exactly_two_shared_accounts_teacher_and_admin_password_hashes_in_streamlit_secrets",
+  "hosted_google_oauth": "refresh_token_in_streamlit_secrets_with_local_token_fallback",
+  "persistent_storage": "google_drive_state_snapshot_optional_for_hosted_use",
+  "curriculum_master": "assessment_focused_82_lo_core_ideas_and_practices",
+  "bundled_question_bank": "Standard_Bank_v1_371_cleaned_approved_default",
+  "role_based_permissions": {
+    "teacher": [
+      "curriculum",
+      "create_diagnostic",
+      "analyse_responses",
+      "reports_ai",
+      "google_connection"
+    ],
+    "admin": [
+      "all_teacher_permissions",
+      "class_master_management",
+      "question_bank_management",
+      "deployment_management"
+    ]
+  },
+  "ai_report_analysis": true,
+  "ai_providers": [
+    "Gemini",
+    "OpenAI",
+    "Claude"
+  ],
+  "ai_api_key_storage": "session_only_never_saved",
+  "ai_default_models": {
+    "Gemini": "gemini-3.5-flash-lite",
+    "OpenAI": "gpt-5.6-luna",
+    "Claude": "claude-sonnet-5"
+  },
+  "class_master": "admin_managed_year_level_name_only_no_enrolment",
+  "class_code_format": "YEAR_LEVEL_NAME",
+  "class_enrolment": "teacher_enters_participating_pupil_count_per_diagnostic_form",
+  "default_2026_classes": "24_classes_P3_to_P6_6_each"
+}

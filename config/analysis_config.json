@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "use_mastery_labels": false,
+  "note": "Mastery labels are disabled by default. Calibrate after pilot data before using labels in reports.",
+  "pilot_thresholds": {
+    "secure_percent": 80,
+    "developing_percent": 50
+  },
+  "minimum_evidence": {
+    "minimum_questions_per_lo_for_label": 2,
+    "minimum_questions_for_misconception_signal": 2
+  }
+}

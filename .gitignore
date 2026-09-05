@@ -1,0 +1,40 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# Never sync real student data through Git.
+private_data/*
+!private_data/README.md
+
+# Generated operational outputs may contain pupil identifiers and diagnostic evidence.
+output/student_reports/*
+output/class_summaries/*
+output/anonymised_exports/*
+output/diagnostics/*
+!output/student_reports/.gitkeep
+!output/class_summaries/.gitkeep
+!output/anonymised_exports/.gitkeep
+!output/diagnostics/.gitkeep
+
+# API secrets
+.env
+*.env
+
+# Google OAuth credentials and form manifests
+private_data/google_auth/
+private_data/google_forms/
+client_secret*.json
+credentials*.json
+token*.json
+
+# Streamlit deployment secrets
+.streamlit/secrets.toml
+
+# Manual state backups
+science_diagnostic_state*.zip
+
+# Mutable teacher configuration; hosted copy belongs in persistent state, not Git.
+data/reference/classes.csv

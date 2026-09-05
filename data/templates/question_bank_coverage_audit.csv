@@ -1,0 +1,83 @@
+﻿LO_ID,Level,Topic_Code,Official_Domain,Official_Learning_Outcome,Before_Questions,New_Questions_Added,After_Questions,Strengthening_Note
+P3-DIV-LNL-C01,P3,P3-DIV-LNL,Core Ideas,Describe the characteristics of living things.,6,1,7,Added TLG-grounded direct concept
+P3-DIV-LNL-C02,P3,P3-DIV-LNL,Core Ideas,Recognise some broad groups of living things based on similarities and differences.,6,0,6,
+P3-DIV-LNL-P01,P3,P3-DIV-LNL,Practices,Observe a variety of living and non-living things and infer differences between them.,3,1,4,Added TLG-grounded misconception/application probe targeting: Anything that moves is a living thing.
+P3-DIV-LNL-P02,P3,P3-DIV-LNL,Practices,Classify living things into broad groups (in plants and animals) based on similarities and differences of common observable characteristics.,3,1,4,Added TLG-grounded application
+P3-DIV-MAT-C01,P3,P3-DIV-MAT,Core Ideas,"Relate the use of various types of materials (wood, metal, ceramic, rubber, glass, plastic, fabric) to their physical properties.",4,1,5,Added TLG-grounded application targeting: Objects are made of only one type of material.
+P3-DIV-MAT-P01,P3,P3-DIV-MAT,Practices,Compare physical properties of materials.,5,1,6,Added TLG-grounded misconception/application probe targeting: All plastic objects float on water.
+P3-CYC-LC-C01,P3,P3-CYC-LC,Core Ideas,Show an understanding that different living things have different life cycles.,4,1,5,Added TLG-grounded misconception/application probe targeting: The first stage of each life cycle is the egg.
+P3-CYC-LC-P01,P3,P3-CYC-LC,Practices,Observe and compare the life cycles of plants grown from seeds over a period of time.,3,1,4,Added TLG-grounded application
+P3-CYC-LC-P02,P3,P3-CYC-LC,Practices,"Observe and compare the life cycles of animals over a period of time (chicken, cockroach, frog, grasshopper, beetle, butterfly, mosquito).",5,1,6,Added TLG-grounded misconception/application probe targeting: All insects have the same life cycle.
+P3-INT-MAG-C01,P3,P3-INT-MAG,Core Ideas,Recognise that a magnet can exert a push or a pull.,4,0,4,
+P3-INT-MAG-C02,P3,P3-INT-MAG,Core Ideas,Identify the characteristics of magnets.,5,2,7,Added TLG-grounded direct concept | Added TLG-grounded misconception/application probe targeting: Bigger magnets are stronger than smaller magnets.
+P3-INT-MAG-C03,P3,P3-INT-MAG,Core Ideas,Recognise uses of magnets in everyday objects.,4,0,4,
+P3-INT-MAG-P01,P3,P3-INT-MAG,Practices,"Compare magnets, non-magnetic materials and magnetic materials.",3,1,4,Added TLG-grounded application targeting: An object is a magnet if it attracts another magnet.
+P3-INT-MAG-P02,P3,P3-INT-MAG,Practices,Make a magnet by the stroke method and the electrical method.,3,1,4,Added TLG-grounded application
+P4-SYS-PLANT-C01,P4,P4-SYS-PLANT,Core Ideas,Identify the different parts of plants and state their functions.,4,2,6,Added TLG-grounded misconception/application probe targeting: Plants obtain their 'food' from the soil through their roots. | Added TLG-grounded misconception/application probe targeting: Plants take in water through the leaves instead of the roots.
+P4-SYS-PLANT-P01,P4,P4-SYS-PLANT,Practices,Observe plant parts.,3,1,4,Added TLG-grounded application
+P4-SYS-DIG-C01,P4,P4-SYS-DIG,Core Ideas,"Identify the human systems in the body and state their functions (digestive, respiratory, circulatory, skeletal and muscular).",4,0,4,
+P4-SYS-DIG-C02,P4,P4-SYS-DIG,Core Ideas,"Identify the parts in the human digestive system (mouth, gullet, stomach, small intestine and large intestine) and describe their functions.",5,2,7,Added TLG-grounded misconception/application probe targeting: Digestion begins in the stomach. | Added TLG-grounded application
+P4-CYC-MAT-C01,P4,P4-CYC-MAT,Core Ideas,State that matter is anything that has mass and occupies space.,4,0,4,
+P4-CYC-MAT-C02,P4,P4-CYC-MAT,Core Ideas,"Differentiate among the three states of matter (solid, liquid, gas) in terms of shape and volume.",4,1,5,Added TLG-grounded misconception/application probe
+P4-CYC-MAT-P01,P4,P4-CYC-MAT,Practices,Measure mass and volume using appropriate apparatus.,3,1,4,Added TLG-grounded application
+P4-ENE-LIGHT-C01,P4,P4-ENE-LIGHT,Core Ideas,Recognise that an object can be seen when it reflects light or when it is a source of light.,4,1,5,"Added TLG-grounded misconception/application probe targeting: Only smooth, shiny objects like mirrors reflect light; dull and rough objects do not reflect light."
+P4-ENE-LIGHT-C02,P4,P4-ENE-LIGHT,Core Ideas,Recognise that light travels in straight lines and thus a shadow is formed when light is completely or partially blocked by an object.,4,1,5,Added TLG-grounded misconception/application probe targeting: Shadow is matter.
+P4-ENE-LIGHT-P01,P4,P4-ENE-LIGHT,Practices,Investigate the variables that affect shadows formed.,4,1,5,Added TLG-grounded application
+P4-ENE-HEAT-C01,P4,P4-ENE-HEAT,Core Ideas,Identify some common sources of heat.,4,1,5,Added TLG-grounded misconception/application probe targeting: Objects that keep us warm are sources of heat.
+P4-ENE-HEAT-C02,P4,P4-ENE-HEAT,Core Ideas,State that the temperature of an object is a measurement of its degree of hotness.,4,0,4,
+P4-ENE-HEAT-C03,P4,P4-ENE-HEAT,Core Ideas,State that heat is a form of energy.,4,0,4,
+P4-ENE-HEAT-C04,P4,P4-ENE-HEAT,Core Ideas,Differentiate between heat and temperature.,4,0,4,
+P4-ENE-HEAT-C05,P4,P4-ENE-HEAT,Core Ideas,Show an understanding that heat flows from a hotter to a colder object/ region/ place until both reach the same temperature.,4,1,5,Added TLG-grounded misconception/application probe targeting: Coldness travels.
+P4-ENE-HEAT-C06,P4,P4-ENE-HEAT,Core Ideas,Relate the change in temperature of an object to the gain or loss of heat by the object.,4,0,4,
+P4-ENE-HEAT-C07,P4,P4-ENE-HEAT,Core Ideas,List some effects of heat gain/loss in our everyday life.,6,0,6,
+P4-ENE-HEAT-C08,P4,P4-ENE-HEAT,Core Ideas,Identify good and poor conductors of heat.,4,1,5,"Added TLG-grounded misconception/application probe targeting: Poor conductors of heat help to keep things cool only, while good conductors help to keep things warm only."
+P4-ENE-HEAT-P01,P4,P4-ENE-HEAT,Practices,Measure temperature using a thermometer and a datalogger with temperature/heat sensors.,3,1,4,Added TLG-grounded application
+P5-CYC-REP-C01,P5,P5-CYC-REP,Core Ideas,Recognise that a cell is a basic unit of life.,4,0,4,Replaced 2 cell-part questions that exceeded the TLG assessment scope with basic-unit-of-life / growth probes.
+P5-CYC-REP-C02,P5,P5-CYC-REP,Core Ideas,Show an understanding that living things reproduce to ensure continuity of their kind and that many characteristics of an organism are passed on from parents to offspring.,4,1,5,"Added TLG-grounded misconception/application probe targeting: Offspring inherits certain characteristics from one parent, and other characteristics from another parent."
+P5-CYC-REP-C03,P5,P5-CYC-REP,Core Ideas,Describe processes in the sexual reproduction of flowering plants.,5,1,6,Added TLG-grounded misconception/application probe
+P5-CYC-REP-C04,P5,P5-CYC-REP,Core Ideas,Recognise the process of fertilisation in the sexual reproduction of humans.,4,0,4,
+P5-CYC-REP-C05,P5,P5-CYC-REP,Core Ideas,Recognise the similarity in terms of fertilisation in the sexual reproduction of flowering plants and humans.,4,0,4,
+P5-CYC-REP-P01,P5,P5-CYC-REP,Practices,Investigate the ways in which plants reproduce.,3,1,4,Added TLG-grounded application targeting: All plants reproduce by seeds.
+P5-CYC-WATER-C01,P5,P5-CYC-WATER,Core Ideas,Recognise that water can exist in three interchangeable states of matter.,4,0,4,
+P5-CYC-WATER-C02,P5,P5-CYC-WATER,Core Ideas,Show an understanding of how water changes from one state to another.,4,1,5,Added TLG-grounded misconception/application probe targeting: Evaporation only occurs when water is boiling or when there is a direct heat source.
+P5-CYC-WATER-C03,P5,P5-CYC-WATER,Core Ideas,Show an understanding of the terms melting point of ice (or freezing point of water) and boiling point of water.,4,0,4,
+P5-CYC-WATER-C04,P5,P5-CYC-WATER,Core Ideas,Show an understanding of the roles of evaporation and condensation in the water cycle.,4,0,4,
+P5-CYC-WATER-C05,P5,P5-CYC-WATER,Core Ideas,Recognise the importance of the water cycle.,4,0,4,
+P5-CYC-WATER-C06,P5,P5-CYC-WATER,Core Ideas,Recognise the importance of water to life processes.,4,0,4,
+P5-CYC-WATER-C07,P5,P5-CYC-WATER,Core Ideas,Describe the impact of water pollution on Earth’s water resources.,4,0,4,
+P5-CYC-WATER-P01,P5,P5-CYC-WATER,Practices,Compare water in 3 states.,3,1,4,Added TLG-grounded application
+P5-CYC-WATER-P02,P5,P5-CYC-WATER,Practices,Investigate the effect of heat gain or loss on the temperature and state of water.,3,1,4,Added TLG-grounded misconception/application probe targeting: The temperature changes continuously during a change of state.
+P5-CYC-WATER-P03,P5,P5-CYC-WATER,Practices,Investigate the factors which affect the rate of evaporation.,4,0,4,
+P5-SYS-PLANT-C01,P5,P5-SYS-PLANT,Core Ideas,Identify the parts of the plant transport system and describe their functions.,4,1,5,Added TLG-grounded misconception/application probe targeting: Water-carrying tubes are found only in stems.
+P5-SYS-PLANT-P01,P5,P5-SYS-PLANT,Practices,Investigate how food and water are transported in the plant.,3,1,4,Added TLG-grounded application
+P5-SYS-HUMAN-C01,P5,P5-SYS-HUMAN,Core Ideas,"Recognise that air is made up of gases such as nitrogen, carbon dioxide, oxygen and water vapour.",4,0,4,
+P5-SYS-HUMAN-C02,P5,P5-SYS-HUMAN,Core Ideas,"Identify the parts of the human respiratory (nose, windpipe, lungs) and circulatory systems (heart, blood, blood vessels) and describe their functions.",5,0,5,
+P5-SYS-HUMAN-C03,P5,P5-SYS-HUMAN,Core Ideas,"Recognise the integration of the different systems (digestive, respiratory and circulatory) in carrying out life processes.",4,0,4,
+P5-SYS-HUMAN-P01,P5,P5-SYS-HUMAN,Practices,"Compare how plants, fish and humans take in oxygen and give out carbon dioxide.",3,1,4,Added TLG-grounded application
+P5-SYS-HUMAN-P02,P5,P5-SYS-HUMAN,Practices,Compare the ways in which substances are transported within plants and humans.,3,1,4,Added TLG-grounded application
+P5-SYS-ELEC-C01,P5,P5-SYS-ELEC,Core Ideas,"Recognise that an electric circuit consisting of an energy source (battery) and other circuit components (wire, bulb, switch) forms an electrical system.",4,0,4,
+P5-SYS-ELEC-C02,P5,P5-SYS-ELEC,Core Ideas,Show an understanding that a closed circuit allows current to flow.,4,1,5,"Added TLG-grounded misconception/application probe targeting: In an open circuit, current flows to the part where there is a gap and 'turns back' to the battery."
+P5-SYS-ELEC-C03,P5,P5-SYS-ELEC,Core Ideas,Identify electrical conductors and insulators.,4,0,4,
+P5-SYS-ELEC-P01,P5,P5-SYS-ELEC,Practices,Construct simple circuits from circuit diagrams.,3,1,4,Added TLG-grounded application
+P5-SYS-ELEC-P02,P5,P5-SYS-ELEC,Practices,Investigate the effect of some variables on the current in a circuit.,3,2,5,Added TLG-grounded application | Added TLG-grounded misconception/application probe targeting: Brightness of each bulb decreases when an additional bulb is connected in parallel circuits.
+P6-ENE-PHOTO-C01,P6,P6-ENE-PHOTO,Core Ideas,Recognise that living things need energy from respiration to carry out life processes.,4,1,5,Added TLG-grounded misconception/application probe targeting: Respiration is the same as breathing.
+P6-ENE-PHOTO-C02,P6,P6-ENE-PHOTO,Core Ideas,Recognise that the Sun is our primary source of energy (light and heat).,4,0,4,
+P6-ENE-PHOTO-C03,P6,P6-ENE-PHOTO,Core Ideas,Differentiate between the ways in which plants and animals obtain energy.,4,0,4,
+P6-ENE-PHOTO-P01,P6,P6-ENE-PHOTO,Practices,"Investigate the requirements (water, light energy and carbon dioxide) for photosynthesis (production of sugar and oxygen).",4,0,4,
+P6-ENE-CONV-C01,P6,P6-ENE-CONV,Core Ideas,Recognise that energy from most of our energy resources is derived in some ways from the Sun.,4,0,4,
+P6-ENE-CONV-C02,P6,P6-ENE-CONV,Core Ideas,Recognise and give examples of the various forms of energy.,6,0,6,
+P6-ENE-CONV-P01,P6,P6-ENE-CONV,Practices,Investigate energy conversion from one form to another.,3,1,4,Added TLG-grounded misconception/application probe targeting: Forces and energy are the same. Energy can be converted into forces.
+P6-INT-FORCE-C01,P6,P6-INT-FORCE,Core Ideas,Identify a force as a push or a pull.,4,1,5,Added TLG-grounded misconception/application probe targeting: Force only involves objects that are in contact with one another.
+P6-INT-FORCE-C02,P6,P6-INT-FORCE,Core Ideas,Show an understanding of the effects of a force.,4,0,4,
+P6-INT-FORCE-C03,P6,P6-INT-FORCE,Core Ideas,Recognise and give examples of the different types of forces.,4,0,4,
+P6-INT-FORCE-C04,P6,P6-INT-FORCE,Core Ideas,Recognise that objects have weight because of the gravitational force acting on the object.,4,0,4,
+P6-INT-FORCE-P01,P6,P6-INT-FORCE,Practices,Investigate the effect of frictional force on the motion of objects.,3,1,4,Added TLG-grounded application
+P6-INT-FORCE-P02,P6,P6-INT-FORCE,Practices,Investigate the effects of elastic spring force.,3,1,4,Added TLG-grounded application
+P6-INT-ENV-C01,P6,P6-INT-ENV,Core Ideas,Identify the factors that affect the survival of an organism.,4,0,4,
+P6-INT-ENV-C02,P6,P6-INT-ENV,Core Ideas,Show an understanding of the effect on organisms when the environment becomes unfavourable (organisms adapt and survive; move to other places or die).,4,0,4,
+P6-INT-ENV-C03,P6,P6-INT-ENV,Core Ideas,"Show an understanding of the energy pathway from the Sun through living things and identify the roles of various organisms (producers, consumers, predators, prey) in a food chain and a food web.",6,0,6,
+P6-INT-ENV-C04,P6,P6-INT-ENV,Core Ideas,"Differentiate among organism, population and community.",4,0,4,
+P6-INT-ENV-C05,P6,P6-INT-ENV,Core Ideas,"Show an understanding that different habitats support different communities (garden, field, pond, seashore, tree, mangrove swamp).",4,0,4,
+P6-INT-ENV-C06,P6,P6-INT-ENV,Core Ideas,Show an understanding that adaptations serve to enhance survival and can be structural or behavioural.,5,0,5,
+P6-INT-ENV-C07,P6,P6-INT-ENV,Core Ideas,Give examples of man’s impact (both positive and negative) on the environment.,4,0,4,
+P6-INT-ENV-P01,P6,P6-INT-ENV,Practices,"Observe, collect and record information regarding the interacting factors within an environment.",4,0,4,

@@ -1,0 +1,156 @@
+{
+  "project": "Primary Science Diagnostic System",
+  "version": "2.5.2",
+  "platform": "Hosted Streamlit + macOS development",
+  "primary_editor": "VS Code",
+  "primary_ui": "Streamlit",
+  "pilot_mode": "private authenticated online deployment candidate",
+  "identity_model": "one class Form + class index number",
+  "google_forms": {
+    "one_form_per_class": true,
+    "one_qr_per_class": true,
+    "collect_email": false,
+    "google_quiz": false,
+    "marking": "local Python",
+    "response_fetch": "Google Forms API",
+    "index_input": "dropdown_from_class_range"
+  },
+  "privacy": {
+    "pupil_names_collected": false,
+    "roster_required": false,
+    "ai_receives_class": false,
+    "ai_receives_index_number": false,
+    "ai_receives_response_id": false,
+    "ai_api_keys_persisted_by_app": false
+  },
+  "testing": {
+    "automated_tests": 77,
+    "status": "passed",
+    "additional_checks": [
+      "python compileall",
+      "82-LO assessment-focused reference integrity",
+      "exact Teacher/Admin shared-account authentication tests",
+      "role-aware navigation and direct Admin page guards",
+      "Google Drive mutable-state snapshot safety tests",
+      "Gemini/OpenAI/Claude provider-schema tests without live credentials",
+      "session-only AI API-key UI contract",
+      "tablet-responsive UI contract",
+      "371-question audited Standard Bank v1 ships Approved and matches the user-supplied canonical CSV",
+      "Teacher navigation excludes Classes; Admin-only Classes page has direct access guard",
+      "2026 P3-P6 class master contains 24 preloaded classes with no enrolment or visible class-code fields",
+      "LO coverage warning runs for Auto Build, Comprehensive and Manual selection"
+    ]
+  },
+  "ui": {
+    "theme": "high-contrast dark",
+    "min_base_font_px": 16,
+    "responsive_max_content_width_px": 1440,
+    "alignment_policy": "stretch/equal cards and controls",
+    "tablet_responsive": true
+  },
+  "question_authoring": "Gemini Notebook template pack + teacher review",
+  "reports": {
+    "navigation_name": "Reports (AI-enabled)",
+    "max_pages_per_pupil": 2,
+    "body_font": "Arial 10 pt",
+    "topic_visual": "compact performance matrix + dot track",
+    "ai_optional": true,
+    "ai_providers": [
+      "Gemini",
+      "OpenAI",
+      "Claude"
+    ],
+    "api_key_storage": "session only; teacher-supplied; never written to disk or persistent snapshot",
+    "default_models": {
+      "Gemini": "gemini-3.5-flash-lite",
+      "OpenAI": "gpt-5.6-luna",
+      "Claude": "claude-sonnet-5"
+    }
+  },
+  "diagnostic_creation": {
+    "diagnostic_type_selector": false,
+    "assessment_level_separate_from_question_levels": true,
+    "cumulative_question_levels": "P3->P3; P4->P3-P4; P5->P3-P5; P6->P3-P6",
+    "manual_cross_topic_question_selection": true,
+    "auto_build": "deterministic LO-balanced selection with probe-type variety and lower Times_Used preference",
+    "comprehensive_testing": "no fixed count; repeated LO evidence plus existing TLG Key Idea and Alternative Conception tags",
+    "coverage_audit": "official Learning Outcomes checked for every selection method; missing LOs warn but do not block build"
+  },
+  "question_bank_management": {
+    "multi_csv_upload": true,
+    "approve_all": "valid visible/import-batch candidates",
+    "save_all": true,
+    "management_tab": true,
+    "search_and_filters": true,
+    "detailed_question_editor": true,
+    "stable_id_policy": "Question_ID locked; app assigns missing IDs",
+    "select_all": true,
+    "deselect_all": true,
+    "delete_selected": "explicit selection + confirmation",
+    "delete_all": "requires exact DELETE ALL phrase",
+    "bundled_bank": "371-question audited Standard Bank v1; preloaded and Approved",
+    "canonical_file": "data/templates/questions_standard_TLG_audited_v1.csv",
+    "startup_guard": "restores empty/legacy Candidate bank and upgrades pre-audit baseline without overwriting later Admin moderation"
+  },
+  "deployment": {
+    "whole_app_login": "required unless auth.enabled=false is explicitly set for local development",
+    "account_model": "exactly two shared accounts: Teacher and Admin",
+    "password_storage": "PBKDF2-SHA256 hashes in Streamlit secrets",
+    "teacher_permissions": [
+      "Curriculum",
+      "Create Diagnostic",
+      "Analyse Responses",
+      "Reports (AI-enabled)",
+      "Google Connection"
+    ],
+    "admin_additional_permissions": [
+      "Classes",
+      "Question Bank",
+      "Deployment"
+    ],
+    "hosted_google_oauth": "refresh token in hosting secrets",
+    "persistent_storage": "Google Drive ZIP snapshot of mutable app state",
+    "persistent_snapshot_excludes": [
+      "Google OAuth secrets/tokens",
+      "static curriculum master",
+      "teacher-supplied AI API keys"
+    ]
+  },
+  "curriculum": {
+    "assessable_learning_outcomes": 82,
+    "core_ideas": 57,
+    "practices": 25,
+    "values_ethics_attitudes": 0
+  },
+  "classes": {
+    "teacher_class_tab": false,
+    "admin_can_add_edit_remove": true,
+    "annual_csv_update": true,
+    "stored_fields": [
+      "Year",
+      "Level",
+      "Class_Name",
+      "Active"
+    ],
+    "enrolment_storage": "none; teacher enters pupil count per selected class when creating a diagnostic",
+    "visible_class_code": false,
+    "internal_key": "generated from Year + Level + Class_Name for Forms/response separation only",
+    "default_2026": {
+      "levels": [
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ],
+      "class_names": [
+        "Unity",
+        "Thanksgiving",
+        "Empathy",
+        "Wonder",
+        "Resilience",
+        "Integrity"
+      ],
+      "total_classes": 24
+    }
+  }
+}
