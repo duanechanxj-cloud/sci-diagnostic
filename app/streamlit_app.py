@@ -19,12 +19,13 @@ from src.runtime import hydrate_persistent_state_once
 from src.ui import apply_apple_style
 
 st.set_page_config(
-    page_title="Science Diagnostic",
+    page_title="Primary Science Diagnostic",
     page_icon="🔬",
     layout="wide",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="collapsed",
 )
 apply_apple_style()
+
 
 APP_VERSION = "2.5.2"
 
@@ -53,7 +54,7 @@ def _require_login() -> None:
 
     accounts = accounts_from_auth_config(auth_config)
     if set(accounts) != set(ACCOUNT_TYPES):
-        st.markdown("# Science Diagnostic")
+        st.markdown("# Primary Science Diagnostic")
         st.error("Teacher and Admin login have not both been configured for this deployment.")
         st.markdown(
             "Run `python scripts/hash_password.py`, then copy the generated `[auth.teacher]` and "
@@ -65,9 +66,47 @@ def _require_login() -> None:
     if st.session_state.get("auth_user"):
         return
 
-    st.markdown('<div class="login-shell">', unsafe_allow_html=True)
-    st.markdown("# Science Diagnostic")
-    st.caption(f"Private departmental diagnostic workspace · V{APP_VERSION}")
+    st.markdown(
+        """
+        <style>
+        /* This stylesheet is emitted only while the user is signing in. */
+        [data-testid="stSidebar"],
+        [data-testid="stSidebarCollapsedControl"] {
+            display: none;
+        }
+
+        .block-container {
+            max-width: 46rem;
+            margin: 0 auto;
+            padding-top: min(16vh, 8rem);
+        }
+        .login-title {
+            font-size: 46px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            white-space: nowrap;
+        }
+        .login-description {
+            color: var(--muted);
+            font-size: 1.12rem;
+            line-height: 1.5;
+            margin-bottom: 1.25rem;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+    st.markdown('<div class="login-title">'
+                'Primary Science Diagnostic'
+                '</div>',
+                unsafe_allow_html=True)
+    st.markdown(
+        '<div class="login-description">'
+        f'Create targeted Primary Science diagnostic checks. Identify learning gaps. '
+        f'Plan what to teach next. V{APP_VERSION}'
+        '</div>',
+        unsafe_allow_html=True,
+    )
     with st.form("private_login", clear_on_submit=False):
         account_label = st.selectbox(
             "Account",
@@ -90,7 +129,6 @@ def _require_login() -> None:
             }
             st.rerun()
         st.error("Password is incorrect for the selected account.")
-    st.markdown("</div>", unsafe_allow_html=True)
     st.stop()
 
 
