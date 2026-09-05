@@ -37,8 +37,11 @@ def add_curriculum_to_scored(scored, learning_outcomes):
 
 
 def student_lo_summary(scored):
+    group_keys = [*IDENTITY_GROUP]
+    if "Form_ID" in scored.columns:
+        group_keys.insert(1, "Form_ID")
     return (
-        scored.groupby([*IDENTITY_GROUP, "Level", "Topic_Code", "LO_ID"], dropna=False)
+        scored.groupby([*group_keys, "Level", "Topic_Code", "LO_ID"], dropna=False)
         .agg(
             Questions=("Question_ID", "count"),
             Correct=("Correct", "sum"),
@@ -50,8 +53,11 @@ def student_lo_summary(scored):
 
 
 def student_topic_summary(scored):
+    group_keys = [*IDENTITY_GROUP]
+    if "Form_ID" in scored.columns:
+        group_keys.insert(1, "Form_ID")
     return (
-        scored.groupby([*IDENTITY_GROUP, "Level", "Topic_Code"], dropna=False)
+        scored.groupby([*group_keys, "Level", "Topic_Code"], dropna=False)
         .agg(Questions=("Question_ID", "count"), Correct=("Correct", "sum"))
         .reset_index()
         .assign(Percent_Correct=lambda d: (d["Correct"] / d["Questions"] * 100).round(1))
@@ -59,8 +65,11 @@ def student_topic_summary(scored):
 
 
 def class_lo_summary(scored):
+    group_keys = ["Class_Code", "Class_Name", "Level", "Topic_Code", "LO_ID"]
+    if "Form_ID" in scored.columns:
+        group_keys.insert(0, "Form_ID")
     return (
-        scored.groupby(["Class_Code", "Class_Name", "Level", "Topic_Code", "LO_ID"], dropna=False)
+        scored.groupby(group_keys, dropna=False)
         .agg(
             Responses=("Question_ID", "count"),
             Correct=("Correct", "sum"),

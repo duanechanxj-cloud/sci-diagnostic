@@ -80,6 +80,7 @@ def api_responses_wide_to_long(responses: pd.DataFrame, question_ids: list[str])
         for question_id in question_ids:
             record = {
                 "Response_ID": str(row["Response_ID"]).strip(),
+                "Form_ID": str(row.get("Form_ID", "")).strip(),
                 "Class_Code": str(row["Class_Code"]).strip(),
                 "Class_Name": str(row["Class_Name"]).strip(),
                 "Index_Number": normalize_index_number(row["Index_Number"]),

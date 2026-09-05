@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from src.assignments import clear_assignment_links, list_assignments
+from src.assignments import clear_assignment_links, delete_assignment, list_assignments
 from src.auth import is_admin_user
 from src.config import GOOGLE_FORMS_DIR
 from src.google_forms_api import make_qr_png
@@ -102,3 +102,35 @@ if is_admin_user(st.session_state.get("auth_user", {})):
             if status.enabled and "failed" in status.message.lower():
                 st.warning(status.message)
             st.rerun()
+
+    st.subheader("Permanent deletion")
+    st.caption(
+        "This removes the assignment record and its locally stored responses, analysis, and generated artifacts. "
+        "It does not delete the Google Form."
+    )
+    delete_confirm = st.checkbox("I understand that this assignment cannot be restored.")
+    if st.button(
+        "Delete assignment permanently",
+        disabled=not delete_confirm,
+        type="secondary",
+        use_container_width=True,
+    ):
+        delete_assignment(manifest, GOOGLE_FORMS_DIR)
+        form_id = str(manifest.get("form_id", ""))
+        for key in ["v24_raw_responses", "v24_active_manifests"]:
+            value = st.session_state.get(key)
+            if key == "v24_active_manifests" and isinstance(value, list):
+                st.session_state[key] = [m for m in value if str(m.get("form_id", "")) != form_id]
+            elif key == "v24_raw_responses" and hasattr(value, "columns") and "Form_ID" in value.columns:
+                st.session_state[key] = value[value["Form_ID"].astype(str) != form_id].copy()
+        for key in ["scored_enriched", "student_lo_summary", "student_topic_summary", "class_summary"]:
+            value = st.session_state.get(key)
+            if hasattr(value, "columns") and "Form_ID" in value.columns:
+                st.session_state[key] = value[value["Form_ID"].astype(str) != form_id].copy()
+        if not st.session_state.get("v24_active_manifests"):
+            st.session_state.pop("active_diagnostic_id", None)
+        status = persist_runtime_state()
+        st.success("Assignment permanently deleted. The Google Form was left unchanged.")
+        if status.enabled and "failed" in status.message.lower():
+            st.warning(status.message)
+        st.rerun()

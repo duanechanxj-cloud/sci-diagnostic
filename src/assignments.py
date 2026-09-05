@@ -2,7 +2,9 @@ from __future__ import annotations
 
 from datetime import datetime
 from pathlib import Path
+import re
 
+from .config import OUTPUT_DIR, RESPONSES_DIR
 from .google_forms_api import list_form_manifests, save_form_manifest
 
 
@@ -35,3 +37,42 @@ def clear_assignment_links(manifest: dict, folder: str | Path) -> dict:
     updated["links_cleared_at"] = datetime.now().isoformat(timespec="seconds")
     save_form_manifest(updated, folder)
     return updated
+
+
+def delete_assignment(
+    manifest: dict,
+    folder: str | Path,
+    *,
+    responses_dir: str | Path = RESPONSES_DIR,
+    output_dir: str | Path = OUTPUT_DIR,
+) -> dict[str, int]:
+    """Permanently remove one assignment's local operational artifacts.
+
+    Artifacts are keyed by the assignment's Google Form ID. This deliberately
+    does not use diagnostic_id or class_name, since those can be shared by
+    multiple class assignments. The Google Form itself is never contacted.
+    """
+    form_id = str(manifest.get("form_id", "")).strip()
+    if not form_id or Path(form_id).name != form_id:
+        raise ValueError("The assignment has no safe Google Form ID.")
+
+    manifest_path = Path(manifest.get("_path", Path(folder) / f"{form_id}.json"))
+    if manifest_path.exists():
+        manifest_path.unlink()
+
+    token = re.escape(form_id)
+    artifact_pattern = re.compile(rf"(^|[_\-.]){token}([_\-.]|$)")
+    removed = {"manifest": int(not manifest_path.exists()), "responses": 0, "artifacts": 0}
+
+    roots = [Path(responses_dir), Path(output_dir)]
+    for root in roots:
+        if not root.exists():
+            continue
+        for path in root.rglob("*"):
+            if path.is_file() and artifact_pattern.search(path.name):
+                path.unlink()
+                if root == Path(responses_dir):
+                    removed["responses"] += 1
+                else:
+                    removed["artifacts"] += 1
+    return removed

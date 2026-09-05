@@ -332,6 +332,35 @@ def test_v252_assignment_link_clear_preserves_manifest_identity(tmp_path):
     assert items[0]["links_cleared"] is True
 
 
+def test_v252_permanent_assignment_delete_isolated_to_form_artifacts(tmp_path):
+    from src.assignments import delete_assignment, list_assignments
+    from src.google_forms_api import save_form_manifest
+
+    forms = tmp_path / "google_forms"
+    responses = tmp_path / "responses"
+    output = tmp_path / "output"
+    first = {"form_id": "FORM1", "diagnostic_id": "D1", "class_name": "P3 Unity"}
+    second = {"form_id": "FORM2", "diagnostic_id": "D1", "class_name": "P3 Wonder"}
+    save_form_manifest(first, forms)
+    save_form_manifest(second, forms)
+    responses.mkdir()
+    output.mkdir()
+    (responses / "FORM1_responses.csv").write_text("first", encoding="utf-8")
+    (responses / "FORM2_responses.csv").write_text("second", encoding="utf-8")
+    (output / "FORM1_analysis.xlsx").write_text("first", encoding="utf-8")
+    (output / "FORM2_report.pdf").write_text("second", encoding="utf-8")
+
+    delete_assignment(first, forms, responses_dir=responses, output_dir=output)
+
+    assert not (forms / "FORM1.json").exists()
+    assert not (responses / "FORM1_responses.csv").exists()
+    assert not (output / "FORM1_analysis.xlsx").exists()
+    assert (forms / "FORM2.json").exists()
+    assert (responses / "FORM2_responses.csv").exists()
+    assert (output / "FORM2_report.pdf").exists()
+    assert len(list_assignments(forms)) == 1
+
+
 def test_v252_dedicated_drive_folder_and_forms_subfolder_are_configured():
     persistence = (ROOT / "src/persistence.py").read_text(encoding="utf-8")
     create_page = (ROOT / "app/pages/Create_Diagnostic.py").read_text(encoding="utf-8")
